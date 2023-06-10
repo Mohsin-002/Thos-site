@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'openSans';
+    src: url('assets/fonts/OpenSans-Regular.ttf');
+}
+
+@font-face{
+    font-family: 'Libre Baskerville';
+    src: url('assets/fonts/LibreBaskerville-Bold.ttf')
+}
+
+@layer components{
+    :root{
+        --navheight: 88px;
+    }
+    .main-content{
+        padding-top: var(--navheight);
+    }
+    .card{
+        @apply flex flex-col space-y-4 h-full
+    }
+    
+    .card-img{
+        @apply w-full object-cover h-full
+    }
+
+
+    .card-title{
+        @apply font-libreBold text-lg sm:text-2xl
+    }
+
+    .card-desc{
+        @apply font-openSans text-sm sm:text-base
+    }
+
+    .width-90{
+        @apply w-[90%] mx-auto
+    }
+
+    .btn{
+        @apply px-5 py-2 xs:px-8 xs:py-4 bg-[rgb(35,35,35)] hover:bg-[rgb(69,69,69)] transition ease-in-out duration-150 text-white font-openSans font-bold
+    }
+
+    .active{
+        @apply underline
+    }
+
+    .primary-color{
+        @apply text-[rgb(35,35,35)]
+    }
+}
